@@ -1,7 +1,7 @@
 const express = require ('express');
 const router = express.Router();
 
-const taskController = require ('./Controller/taskController');
+const taskController = require ('./controllers/taskController');
 
 
 // Création des routes CRUD pour créer, afficher, modifier et supprimer une tâche
