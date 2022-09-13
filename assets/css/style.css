@@ -1,0 +1,14 @@
+.task {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.pencil {
+    cursor: pointer;
+}
+
+.check {
+    text-decoration: line-through;
+    font-style: italic;
+}

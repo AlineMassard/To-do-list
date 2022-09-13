@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/8672318ec8.js" crossorigin="anonymous"></script>
+    <title>To-do List</title>
+</head>
+<body>
+    <div class="container is-max-desktop">
+        <h1 class="title is-1 has-text-centered mt-5">Ma to-do list</h1>
+
+        <form class="add-task box field has-addons ">
+            <div class="control has-icons-left is-expanded">
+                <input class="input is-medium" type="text" name="name" placeholder="Ma future tâche">
+                <span class="icon is-medium is-left">
+                    <i class="fa-solid fa-list-check"></i>
+                </span>
+            </div>
+            <div class="control">
+              <button class="button is-medium is-primary is-outlined">
+                <span class="icon is-medium">
+                    <i class="fas fa-solid fa-plus"></i>
+                    </span>
+                </button>
+            </div>
+        </form>
+
+        
+        <h2 class="subtitle is-3 has-text-centered">En cours</h2>
+        
+        <div class="here"></div>
+
+        <template class="template_progress_task" >
+            <div class="box task" data-task-id="1">
+                <label class="checkbox">
+                    <input class="case is-medium mr-3" type="checkbox">
+                    <span class="name-task"></span> 
+                </label>
+
+                <div class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                      <header class="modal-card-head">
+                        <p class="modal-card-title">Modifier ma tâche</p>
+                        
+                      </header>
+                      <section class="modal-card-body">
+                        <form class="edit_form">
+                            <input type="text" name="name">
+                            <input type="color" name="color">
+                            <input type="hidden" name="id">
+                        
+                            <footer class="modal-card-foot">
+                                <button class="button is-success">Save changes</button>
+                                <button class="button">Cancel</button>
+                              </footer>
+                        </form>
+                    </section>
+                      
+                      
+                    </div>
+                  </div>
+
+                <div>
+                <span class="mr-4 pencil">
+                    <i class="fa-sharp fa-solid fa-pencil"></i>
+                </span>
+
+                <button class="delete is-medium"></button>
+            </div>
+            </div>
+        </template>
+        
+
+        <div>
+            <h2 class="subtitle_finish subtitle is-3 has-text-centered mt-4 mb-4">Terminé</h2>
+        </div>
+
+        <span class="finish_here"></span>
+    
+
+    </div>
+
+    <script src="/js/task.js"></script>
+    <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
+    
+</body>
+</html>
